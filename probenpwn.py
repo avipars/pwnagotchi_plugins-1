@@ -35,6 +35,7 @@ from queue import PriorityQueue, Empty
 import heapq
 import bisect
 import multiprocessing
+import pwnagotchi.ui.fonts as fonts
 
 # Optional imports
 try:
@@ -501,21 +502,21 @@ class ProbeNpwn(plugins.Plugin):
         if self.ui_initialized:
             return
         if self.show_attacks:
-            ui.add_element('attacks', components.Text(position=self.ui_positions['attacks'], value='Attacks: 0', color=255))
+            ui.add_element('attacks', components.Text(position=self.ui_positions['attacks'], value='Attacks: 0', color=255, font=fonts.Small))
         if self.show_success:
-            ui.add_element('success', components.Text(position=self.ui_positions['success'], value='Success: 0.0%', color=255))
+            ui.add_element('success', components.Text(position=self.ui_positions['success'], value='Success: 0.0%', color=255, font=fonts.Small))
         if self.show_handshakes:
-            ui.add_element('handshakes', components.Text(position=self.ui_positions['handshakes'], value='Handshakes: 0', color=255))
+            ui.add_element('handshakes', components.Text(position=self.ui_positions['handshakes'], value='Handshakes: 0', color=255, font=fonts.Small))
         if self.show_mode:
-            ui.add_element('mode', components.Text(position=self.ui_positions['mode'], value='Mode: tactical', color=255))
+            ui.add_element('mode', components.Text(position=self.ui_positions['mode'], value='Mode: tactical', color=255, font=fonts.Small))
         if self.show_top_channels:
-            ui.add_element('top_channels', components.Text(position=self.ui_positions['top_channels'], value='Ch: 1,6,11', color=255))
+            ui.add_element('top_channels', components.Text(position=self.ui_positions['top_channels'], value='Ch: 1,6,11', color=255, font=fonts.Small))
         if self.show_pmf_status:
-            ui.add_element('pmf_status', components.Text(position=self.ui_positions['pmf_status'], value='PMF: off', color=255))
+            ui.add_element('pmf_status', components.Text(position=self.ui_positions['pmf_status'], value='PMF: off', color=255, font=fonts.Small))
         if self.show_success_bar:
-            ui.add_element('success_bar', components.Text(position=self.ui_positions['success_bar'], value='[____]', color=255))
+            ui.add_element('success_bar', components.Text(position=self.ui_positions['success_bar'], value='[____]', color=255, font=fonts.Small))
         if self.show_pnp_status:
-            ui.add_element('pnp_status', components.Text(position=self.ui_positions['pnp_status'], value='Probe ready', color=255))
+            ui.add_element('pnp_status', components.Text(position=self.ui_positions['pnp_status'], value='Probe ready', color=255, font=fonts.Small))
         self.ui_initialized = True
 
     # ------------------------------------------------------------------
